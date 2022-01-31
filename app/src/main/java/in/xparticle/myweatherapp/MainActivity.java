@@ -65,9 +65,25 @@ public class MainActivity extends AppCompatActivity {
                                     JSONObject parObj= ar.getJSONObject(i);
                                     String myWeather= parObj.getString("main");
                                     result.setText(myWeather);
-                                    if(myWeather.equals("Haze")){
+                                    if(myWeather.equals("Mist")){
                                         relativeLayout.setBackgroundResource(R.drawable.mistweather);
+                                    }else if(myWeather.equals("Haze")){
+                                        relativeLayout.setBackgroundResource(R.drawable.hazeweather);
+                                    }else if(myWeather.equals("Clear")){
+                                    relativeLayout.setBackgroundResource(R.drawable.clearweather);
+                                    }else if(myWeather.equals("Clouds")){
+                                        relativeLayout.setBackgroundResource(R.drawable.cloudsweather);
+                                    }else if(myWeather.equals("Snow")){
+                                        relativeLayout.setBackgroundResource(R.drawable.snowfallweather);
+                                    }else if(myWeather.equals("Thunderstorm")){
+                                        relativeLayout.setBackgroundResource(R.drawable.thunderweather2);
+                                    }else if(myWeather.equals("Rain")){
+                                        relativeLayout.setBackgroundResource(R.drawable.rainweather);
+                                    }else {
+                                        relativeLayout.setBackgroundResource(R.drawable.weather);
+
                                     }
+
                                 }
                                 String info2=jsonObject.getString("main");
                                 JSONObject object=new JSONObject(info2);
